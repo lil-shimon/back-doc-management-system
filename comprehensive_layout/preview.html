@@ -1,0 +1,210 @@
+<html style="height: auto; min-height: 100%;" lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="LFXWxJiUNf9aGpdpBdhIev5j6FTPzG1gcxjPaNo0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>プレビュー</title>
+<link href="./assets/css/def.css" rel="stylesheet">
+<link href="./assets/css/style.css" rel="stylesheet">
+</head>
+<body class="skin-blue sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <a href="index2.html" class="logo">
+      <span class="logo-mini">
+        <b>A</b>LT 
+      </span> 
+      <span class="logo-lg">
+        <b>Admin</b>LTE 
+      </span>
+    </a>
+
+    <nav class="navbar navbar-static-top" style="display: flex; justify-content: flex-end; align-items: center; padding-right: 10px;">
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <div class="pull-right">
+              <a class="btn btn-default btn-flat">Sign out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar" style="height: auto;">
+      <ul data-widget="tree" class="sidebar-menu tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class=""><a href="./"><i class="fa fa-th"></i> <span>新規登録</span></a></li>
+        <li class=""><a href="./setting.html"><i class="fa fa-th"></i> <span>項目登録</span></a></li>
+        <li class="router-link-exact-active router-link-active"><a href="./quote.html"><i class="fa fa-th"></i> <span>見積一覧</span></a></li>
+        <li class=""><a href="/create-doc"><i class="fa fa-th"></i> <span>受注一覧</span></a></li>
+        <li class=""><a href="/create-doc"><i class="fa fa-th"></i> <span>案件管理</span></a></li>
+        <li class=""><a href="/create-doc"><i class="fa fa-th"></i> <span>メンテナンス</span></a></li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper is-add_style">
+    <div class="main_content p-setting">
+      <div class="is-body_content">
+        <h1 class="is-body_content__title">プレビュー</h1>
+        <div class="is-body_content__preview">
+          <div class="p-preview__content">
+            <div class="p-preview__content__btn">
+                <div class="preview__left">
+                    <button type="button" class="o-btn is-white">一覧へ戻る</button>
+                </div>
+                <div class="preview__right">
+                    <button type="button" class="o-btn">編集</button>
+                    <button type="button" class="o-btn">メール</button>
+                    <button type="button" class="o-btn">印刷</button>
+                    <button type="button" class="o-btn">ダウンロード</button>
+                </div>
+            </div>
+            <div class="p-preview__content__detail">
+                <!--previewの内容がこの中に入ります-->
+                <img src="assets/images/preview/preview_image.jpg" alt="preview">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--商品新規登録モーダルここから-->
+    <!--
+    <form>
+      <div class="o-modal">
+        <div class="is-dialog">
+          <div class="o-modal__content">
+            <div class="o-modal__content__title"><h2>新規登録</h2></div>
+            <div class="o-modal__content__body">
+              <div class="o-form">
+                <div class="o-form__title">名前</div>
+                <input type="text" name="" value="">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">単位</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">単価</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">税</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+            </div>
+            <div class="o-modal__content__btn">
+              <button type="button" class="o-btn is-grey">キャンセル</button>
+              <button type="submit" class="o-btn">登録</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    -->
+    <!--商品新規登録モーダルここまで-->
+    <!--送料新規登録モーダルここから-->
+    <!--
+    <form>
+      <div class="o-modal">
+        <div class="is-dialog">
+          <div class="o-modal__content">
+            <div class="o-modal__content__title"><h2>新規登録</h2></div>
+            <div class="o-modal__content__body">
+              <div class="o-form">
+                <div class="o-form__title">送付元</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">送付先</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">サイズ</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">送料</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">単位</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">税</div>
+                <input type="text" name="" value="" class="is-min">
+              </div>
+            </div>
+            <div class="o-modal__content__btn">
+              <button type="button" class="o-btn is-grey">キャンセル</button>
+              <button type="submit" class="o-btn">登録</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    -->
+    <!--送料新規登録モーダルここまで-->
+    <!--ユーザー新規登録モーダルここから-->
+    <!--
+    <form>
+      <div class="o-modal">
+        <div class="is-dialog">
+          <div class="o-modal__content">
+            <div class="o-modal__content__title"><h2>新規登録</h2></div>
+            <div class="o-modal__content__body">
+              <div class="o-form">
+                <div class="o-form__title">名前</div>
+                <input type="text" name="" value="">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">メールアドレス</div>
+                <input type="text" name="" value="">
+              </div>
+            </div>
+            <div class="o-modal__content__btn">
+              <button type="button" class="o-btn is-grey">キャンセル</button>
+              <button type="submit" class="o-btn">登録</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    -->
+    <!--ユーザー新規登録モーダルここまで-->
+    <!--会社ロゴ新規登録モーダルここから-->
+    <!--
+    <form>
+      <div class="o-modal">
+        <div class="is-dialog">
+          <div class="o-modal__content">
+            <div class="o-modal__content__title"><h2>新規登録</h2></div>
+            <div class="o-modal__content__body">
+              <div class="o-form">
+                <div class="o-form__title">名前</div>
+                <input type="text" name="" value="">
+              </div>
+              <div class="o-form">
+                <div class="o-form__title">画像</div>
+                <input type="file" name="" class="is-file">
+              </div>
+            </div>
+            <div class="o-modal__content__btn">
+              <button type="button" class="o-btn is-grey">キャンセル</button>
+              <button type="submit" class="o-btn">登録</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    -->
+    <!--会社ロゴ新規登録モーダルここまで-->
+  </div>
+</div>
+<script src="https://10.dev.cloud-sign.com/js/app.js"></script>
+</body>
+</html>

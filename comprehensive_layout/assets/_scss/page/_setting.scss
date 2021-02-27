@@ -1,0 +1,47 @@
+// main: ../style.scss
+.p-setting{
+  @include e(content) {
+    @include e(btn) {
+      margin-bottom: 15px;
+      .o-btn{
+        margin-left: 0;
+        max-width: 130px;
+        line-height: 40px;
+        height: 40px;
+      }
+    }
+  }
+  @include e(tab) {
+    width: 100%;
+    max-width: 480px;
+    ul{
+      letter-spacing: -.4em;
+      margin-bottom: 0;
+      li{
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: normal;
+        width: 25%;
+        text-align: center;
+        a{
+          border: 1px solid #D1D1D1;
+          border-bottom: none;
+          border-radius: 10px 10px 0 0;
+          font-size: 14px;
+          font-weight: bold;
+          display: block;
+          line-height: 38px;
+          height: 38px;
+          color: #888888;
+          @include mq {
+            font-size: 16px;
+          }
+          @include m(active) {
+            color: #fff;
+            background: #367FA9;
+          }
+        }
+      }
+    }
+  }
+}

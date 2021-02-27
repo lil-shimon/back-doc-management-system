@@ -1,0 +1,90 @@
+// main: ../style.scss
+.p-quote{
+  .is-body_content__main{
+    max-width: 1060px;
+    padding-bottom: 28px;
+  }
+  @include e(content) {
+    @include e(select) {
+      margin-bottom: 15px;
+      ul{
+        letter-spacing: -.4em;
+        max-width: 500px;
+        li{
+          width: 22.75%;
+          margin-right: 3%;
+          vertical-align: top;
+          display: inline-block;
+          letter-spacing: normal;
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    @include e(search) {
+      position: relative;
+      margin-bottom: 15px;
+      input{
+        padding-left: 30px;
+        border: 1px solid #D1D1D1;
+        border-radius: 4px;
+        max-width: 370px;
+      }
+      .o-btn{
+        width: 18px;
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        -webkit-transform: translateY(-50%); /* Safari用 */
+        transform: translateY(-50%);
+      }
+    }
+    @include e(tab) {
+      margin-bottom: 15px;
+      ul{
+        border-radius: 4px;
+        letter-spacing: -.4em;
+        @include tab {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 5px;
+        }
+        li{
+          width: 20%;
+          vertical-align: top;
+          display: inline-block;
+          letter-spacing: normal;
+          @include tab {
+            width: 128px;
+          }
+          &:first-child a{
+            border-radius: 4px 0 0 4px;
+            border-left: 1px solid #D1D1D1;
+          }
+          &:last-child a{
+            border-radius: 0 4px 4px 0;
+          }
+          a{
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            text-align: center;
+            border: 1px solid #D1D1D1;
+            border-left: none;
+            font-size: 11px;
+            font-weight: bold;
+            color: #888888;
+            @include mq {
+              font-size: 15px;
+            }
+            @include m(active) {
+              background: #367FA9;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

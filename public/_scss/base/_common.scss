@@ -1,0 +1,128 @@
+// main: ../style.scss
+.is-add_style{
+  font-family: 'Hiragino Kaku Gothic ProN','メイリオ','Meiryo',sans-serif;
+  background-color: #fff !important;
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color_bk;
+}
+
+dt{
+  font-weight: normal;
+}
+
+a:hover, a:active, .o-btn:hover, .o-btn:active{
+  outline: 0;
+  text-decoration: none;
+  opacity: 0.7;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.center{
+  text-align: center;
+}
+
+.textright{
+  text-align: right;
+}
+
+.sponly{
+  display: block !important;
+  @include mq {
+    display: none !important;
+  }
+}
+
+.pconly{
+  display: none !important;
+  &.is-inline{
+    @include mq {
+      display: inline !important;
+    }
+  }
+  &.is-block{
+    @include mq {
+      display: block !important;
+    }
+  }
+}
+
+.icon{
+  font-style: normal;
+  @include m(trash) {
+    padding: 11px 0 11px 20px;
+    background: url(../images/common/icon_trash.png) center no-repeat;
+    background-size: 18px;
+  }
+  @include m(search) {
+    padding: 10px 0 10px 18px;
+    background: url(../images/common/icon_search.png) center no-repeat;
+    background-size: 18px;
+  }
+}
+
+.is-body_content{
+  padding: 10px 2.5% 20px;
+  @include mq {
+    padding: 20px 30px 40px;
+  }
+  @include e(title) {
+    line-height: 1;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 10px;
+    @include mq {
+      margin-bottom: 15px;
+    }
+  }
+  @include e(main) {
+    border: 1px solid #D1D1D1;
+    padding: 10px;
+    max-width: 900px;
+    @include mq {
+      padding: 15px;
+    }
+  }
+  @include e(btn) {
+    max-width: 900px;
+    margin-top: 30px;
+    text-align: right;
+    letter-spacing: -.4em;
+    @include mq {
+      margin-top: 50px;
+    }
+    .o-btn{
+      max-width: 32%;
+      display: inline-block;
+      letter-spacing: normal;
+      vertical-align: top;
+      margin-right: 2%;
+      @include mq {
+        max-width: 150px;
+        margin-right: 10px;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

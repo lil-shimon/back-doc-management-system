@@ -1,0 +1,47 @@
+/*
+ * BEM関連
+ */
+@mixin e($names...) {
+  @each $name in $names {
+    &__#{$name}{
+      @content;
+    }
+  }
+}
+
+@mixin m($names...) {
+  @each $name in $names {
+    &.is-#{$name}{
+      @content;
+    }
+  }
+}
+
+@mixin mq {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: $breakpoint_tab) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: $breakpoint_pc) {
+    @content;
+  }
+}
+
+/*
+ * clearfix
+ */
+@mixin cf {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

@@ -1,0 +1,183 @@
+// main: ../style.scss
+.p-top{
+  padding-top: 15px;
+  @include e(add) {
+    padding-bottom: 80px;
+    @include mq {
+      padding-bottom: 140px;
+    }
+  }
+  @include e(table_total) {
+    padding-top: 14px;
+    padding-bottom: 20px;
+    table{
+      width: 300px;
+      margin-left: auto;
+      margin-right: 0;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 1px;
+      th,td{
+        text-align: center;
+        line-height: 1;
+      }
+      th{
+        background: #D0E4F0;
+        padding: 12px;
+      }
+      td{
+        padding: 12px;
+        border: 1px solid #D1D1D1;
+        span{
+          display: block;
+          min-height: 32px;
+        }
+      }
+    }
+  }
+  @include e(table) {
+    padding-left: 5px;
+    padding-right: 5px;
+    .is-add{
+      text-align: right;
+      margin-bottom: 8px;
+    }
+  }
+  @include e(title) {
+    padding: 15px 0 5px;
+    position: relative;
+    margin-bottom: 5px;
+    @include tab {
+      margin-bottom: 25px;
+      border-bottom: 4px solid $color_bk;
+    }
+    h2{
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      border-bottom: 4px solid $color_bk;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      @include tab {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+    .o-form{
+      @include tab {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%); /* Safari用 */
+        transform: translateY(-50%);
+      }
+      .is-num{
+        display: inline-block;
+      }
+      select{
+        width: 130px;
+        display: inline-block;
+        font-size: 14px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @include e(price) {
+    margin-bottom: 30px;
+    max-width: 600px;
+    ul{
+      letter-spacing: -.4em;
+      li{
+        text-align: center;
+        letter-spacing: normal;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        border: 1px solid #D1D1D1;
+        @include mq {
+          height: 50px;
+          line-height: 50px;
+        }
+        @include m(main) {
+          background: #D1D1D1;
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
+  @include e(data) {
+    padding-bottom: 10px;
+    @include mq {
+      padding-bottom: 20px;
+    }
+    .o-form input{
+      padding-left: 5px;
+    }
+    @include e(input) {
+      input{
+        margin-bottom: 8px;
+      }
+    }
+    @include e(img) {
+      margin-bottom: 10px;
+      @include tab {
+        margin-bottom: 0;
+      }
+      img{
+        width: 100%;
+      }
+    }
+    @include e(box) {
+      padding: 25px 5px;
+      p{
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+    dl{
+      margin-bottom: 0;
+      @include tab {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+      dt{
+        @include tab {
+          display: table-cell;
+          vertical-align: top;
+          padding-right: 12%;
+        }
+        .o-form{
+          letter-spacing: -.4em;
+          input{
+            display: inline-block;
+            letter-spacing: normal;
+            width: 72%;
+            margin-right: 2%;
+          }
+          select{
+            display: inline-block;
+            letter-spacing: normal;
+            width: 26%;
+          }
+        }
+      }
+      dd{
+        .o-form{
+          margin-bottom: 20px;
+        }
+        @include tab {
+          display: table-cell;
+          vertical-align: top;
+          width: 330px;
+        }
+      }
+    }
+  }
+}

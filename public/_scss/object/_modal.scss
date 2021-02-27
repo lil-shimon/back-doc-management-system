@@ -1,0 +1,87 @@
+// main: ../style.scss
+.o-modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  .is-dialog{
+    margin: 1.75rem auto;
+    width: 92%;
+    max-width: 600px;
+  }
+  @include e(content) {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #707070;
+    border-radius: .3rem;
+    outline: 0;
+    padding: 40px 6%;
+    @include mq {
+      padding: 40px 40px 30px;
+    }
+    @include e(btn) {
+      text-align: right;
+      margin-top: 10px;
+      letter-spacing: -.4em;
+      .o-btn{
+        margin-right: 0;
+        margin-left: 10px;
+        max-width: 130px;
+        line-height: 40px;
+        height: 40px;
+        display: inline-block;
+        letter-spacing: normal;
+        vertical-align: top;
+      }
+
+    }
+    @include e(body) {
+      .o-form{
+        margin-bottom: 15px;
+        .o-form__title{
+          font-weight: normal;
+          font-size: 15px;
+          margin-bottom: 12px;
+        }
+        input{
+          border: 1px solid #D1D1D1;
+          border-radius: 4px;
+          max-width: 78%;
+          @include m(min) {
+            max-width: 96px;
+          }
+          @include m(file) {
+            border: none;
+            padding: 0;
+          }
+        }
+      }
+    }
+    @include e(title) {
+      text-align: center;
+      h2{
+        line-height: 1;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        @include mq {
+          font-size: 22px;
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}

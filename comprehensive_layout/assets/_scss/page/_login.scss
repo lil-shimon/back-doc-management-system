@@ -1,0 +1,32 @@
+// main: ../style.scss
+.p-login{
+  .is-body_content__main{
+    padding-top: 30px;
+    padding-bottom: 32px;
+    @include mq {
+      padding-top: 50px;
+    }
+  }
+  @include e(content) {
+    max-width: 370px;
+    margin: 0 auto;
+    .o-btn{
+      margin-top: 33px;
+      max-width: 130px;
+      line-height: 40px;
+      height: 40px;
+    }
+    .o-form{
+      margin-bottom: 22px;
+      .o-form__title{
+        margin-bottom: 4px;
+      }
+      input{
+        border: 1px solid #D1D1D1;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
