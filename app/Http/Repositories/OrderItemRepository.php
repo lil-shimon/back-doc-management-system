@@ -85,22 +85,36 @@ class OrderItemRepository
 
             $order_item = $this->order_item->where('order_id', $orderId)->first();
 
-            if (!preg_match('/null/', $orderItem["quotation"])) {
-                Storage::putFileAs('/public', $orderItem["quotation"], '見積書' . $orderId);
+            //見積書がセットされていたら実行
+            if (isset($orderItem['quotation'])) {
+                if (!preg_match('/null/', $orderItem["quotation"])) {
+                    Storage::putFileAs('/public', $orderItem["quotation"], '見積書' . $orderId);
+                }
             }
-            if (!preg_match('/null/', $orderItem["invoice"])) {
-                Storage::putFileAs('/public', $orderItem["invoice"], '注文書' . $orderId);
+
+            //注文書がセットされていたら実行
+            if (isset($orderItem['invoice'])) {
+                if (!preg_match('/null/', $orderItem["invoice"])) {
+                    Storage::putFileAs('/public', $orderItem["invoice"], '注文書' . $orderId);
+                }
             }
 
             // 見積もり部がなければ作成
             if (!$order_item) {
                 $order_item = new OrderItem;
-                if (!preg_match('/null/', $orderItem["quotation"])) {
-                    Storage::putFileAs('/public', $orderItem["quotation"], '見積書' . $orderId);
+                if (isset($orderItem['quotation'])) {
+
+                    if (!preg_match('/null/', $orderItem["quotation"])) {
+                        Storage::putFileAs('/public', $orderItem["quotation"], '見積書' . $orderId);
+                    }
                 }
-                if (!preg_match('/null/', $orderItem["invoice"])) {
-                    Storage::putFileAs('/public', $orderItem["invoice"], '注文書' . $orderId);
+
+                if (isset($orderItem['invoice'])) {
+                    if (!preg_match('/null/', $orderItem["invoice"])) {
+                        Storage::putFileAs('/public', $orderItem["invoice"], '注文書' . $orderId);
+                    }
                 }
+
                 $order_item->fill(array_merge($orderItem, ["order_id" => $orderId]))->save();
             }
 

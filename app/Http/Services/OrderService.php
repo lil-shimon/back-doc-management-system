@@ -116,7 +116,9 @@ class OrderService
             //案件を編集
             $this->orderRepository->update($order, $orderId);
             //見積もり部を編集
-            $this->orderItemRepository->update($order, $orderId);
+            if (isset($order["sub_total"])) {
+                $this->orderItemRepository->update($order, $orderId);
+            }
             //その他添付ファイル
             if (isset($order["file_path"])) {
                 $this->attachmentRepository->update($order, $orderId);
